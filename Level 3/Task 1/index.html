@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Showcase </title>
+    <style>
+        *  {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .slideshow-window {
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .slideshow-track {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: slideAnimation 12s infinite ease-in-out;
+        }
+
+        .slideshow-track img {
+            width: 33.333%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slideAnimation {
+            0%, 25% { left: 0%; }
+            33%, 58% { left: -100%; }
+            66%, 91% { left: -200%; }
+            100% { left: 0%; }
+        }
+
+        /* --- Gallery Component Styles --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-card {
+            position: relative;
+        }
+
+        .gallery-card summary {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .gallery-card summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .thumb-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .thumb-img:hover {
+            transform : translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .lightbox-overlay {
+            position : fixed;
+            top: 0;
+            left: 0;
+            width:  100vw;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.9);
+            display: flex;
+            justify-content : center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .lightbox-overlay img {
+            max-width: 90%;
+             max-height: 80%;
+            border-radius: 6px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-overlay::after  {
+            content: "Click outside or anywhere to close";
+            position: absolute;
+            bottom: 30px;
+            color: #94a3b8;
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 640px) {
+            .slideshow-window { 
+                 height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <section>
+            <h2>Featured Highlights .</h2>
+            <div class="slideshow-window">
+                <div class="slideshow-track">
+                    <img src="1.jpg" alt="Slide 1">
+                    <img src="2.jpg" alt="Slide 2">
+                    <img src="3.jpg" alt="Slide 3">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Media  Gallery</h2>
+            <div class="gallery-grid">
+                
+                <details class="gallery-card">
+                    <summary>
+                        <img src="4.jpg" alt="Thumbnail 1" class="thumb-img">
+                    </summary>
+                    <div class="lightbox-overlay">
+                        <img src="4.jpg" alt="Expanded 1">
+                    </div>
+                </details>
+
+                <details class="gallery-card">
+                    <summary>
+                        <img src="5.jpeg" alt="Thumbnail 2" class="thumb-img">
+                    </summary>
+                    <div class="lightbox-overlay">
+                        <img src="5.jpeg" alt="Expanded 2">
+                    </div>
+                </details>
+
+                <details class="gallery-card">
+                    <summary>
+                        <img src="6.jpg" alt="Thumbnail 3" class="thumb-img">
+                    </summary>
+                    <div class="lightbox-overlay">
+                        <img src="6.jpg" alt="Expanded 3">
+                    </div>
+                </details>
+
+                <details class="gallery-card">
+                    <summary>
+                        <img src="8.png" alt="Thumbnail 4" class="thumb-img">
+                    </summary> 
+                    <div class=" lightbox-overlay">
+                        <img src="8.png" alt="Expanded 4">
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
