@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Internship | Cognifyz Technologies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#635bff"/>
+                <path d="M2 17L12 22L22 17" stroke="#00d4b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="#635bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="logo-text">
+                Cognifyz
+                <span>WHERE DATA MEETS INTELLIGENCE</span>
+            </div>
+        </div>
+        <button class="cta-btn btn-small open-modal">Apply Now</button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge-row">
+                <span class="pill-badge">ISO 9001:2015 Certified</span>
+                <span class="pill-badge">MSME Registered</span>
+            </div>
+            <h1>Web Developer Internship <br><span class="highlight">Opportunities at Cognifyz Technologies</span></h1>
+            <p>Kickstart your technical journey with a structured 3-month remote internship program. Bridge academic learning and real-world tech demands by building stable, scalable user interfaces and modern web applications.</p>
+            
+            <div class="hero-actions">
+                <a href="https://share.google/OdHylcMEAf20mLW08" target="_blank" class="cta-btn">Apply Via Google</a>
+                <button class="cta-btn btn-secondary open-modal">Quick Apply</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Program Highlights</h2>
+        <p class="section-subtitle">What you will gain during your tenure at Cognifyz</p>
+        
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Real-World Experience</h3>
+                <p>Work directly on impactful web development tasks. Gain practical experience building front-end interfaces and integrating core application logic that mirrors production environments.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧠</div>
+                <h3>Expert Mentorship</h3>
+                <p>Be guided directly by seasoned engineering professionals. Receive actionable code reviews, structural guidance, and insights to rapidly sharpen your development standards.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💼</div>
+                <h3>Professional Presence</h3>
+                <p>Enhance your career portfolio. Successful completion grants you an official Internship Certificate to share confidently on platforms like LinkedIn to highlight your technical growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section tech-section">
+        <h2 class="section-title">Desired Qualifications & Skills</h2>
+        <p class="section-subtitle">We value curiosity, academic integrity, and foundational knowledge</p>
+        
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h4>Front-End Core</h4>
+                <p>Strong foundations or clear interest in HTML5, CSS3, modern JavaScript, and building clean, responsive layouts.</p>
+            </div>
+            <div class="skill-card">
+                <h4>Back-End Basics</h4>
+                <p>Familiarity with server concepts, component integration, and writing maintainable code habits.</p>
+            </div>
+            <div class="skill-card">
+                <h4>Professional Ethics</h4>
+                <p>High sense of collaboration, eagerness to solve logic issues, and strict compliance with original code standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-banner">
+        <h2>Ready to Shape Your Engineering Future?</h2>
+        <p>Positions are filled on a rolling evaluation basis. Take the step today.</p>
+        <button class="cta-btn open-modal">Learn More & Apply</button>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="logo-container invert">
+                    <div class="logo-text">Cognifyz</div>
+                </div>
+                <p>A premier technology provider specializing in data science, artificial intelligence solutions, and impactful development projects globally.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Inquiries & Portals</h3>
+                <a href="mailto:contact@cognifyz.com">contact@cognifyz.com</a>
+                <a href="mailto:support@cognifyz.com">support@cognifyz.com</a>
+                <a href="http://www.cognifyz.com" target="_blank">www.cognifyz.com</a>
+            </div>
+            <div class="footer-socials">
+                <h3>Connect With Us</h3>
+                <a href="https://www.linkedin.com/company/cognifyz-technologies" target="_blank">LinkedIn</a>
+                <a href="https://x.com/cognifyz_tech" target="_blank">X / Twitter</a>
+                <p class="location-tag">Presence: Nagpur & Warora, India</p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2026 Cognifyz IT Solutions Pvt. Ltd. All rights reserved. ISO 9001:2015 & MSME Certified Entity.
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="applyModal">
+        <div class="modal-box">
+            <button class="close-modal-btn" id="closeModal">&times;</button>
+            <h3>Apply for Web Developer Internship</h3>
+            <p>Fill out this quick form or use our direct <a href="https://share.google/OdHylcMEAf20mLW08" target="_blank">Google Link</a>.</p>
+            
+            <form id="internshipForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="github">GitHub Profile / Portfolio Link</label>
+                    <input type="url" id="github" placeholder="https://github.com/username">
+                </div>
+                <button type="submit" class="cta-btn" style="width: 100%; border: none; cursor: pointer;">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
